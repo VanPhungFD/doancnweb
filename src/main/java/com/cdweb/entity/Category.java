@@ -17,7 +17,7 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;
-	@NotBlank(message = "Không được bỏ trống tên loại sản phẩm Tiếng Anh ")
+
 	String name;
 	@NotBlank(message = "Không được bỏ trống tên loại sản phẩm Tiếng Việt")
 	String nameVN;

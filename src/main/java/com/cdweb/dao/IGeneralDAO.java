@@ -3,7 +3,8 @@ package com.cdweb.dao;
 import java.util.List;
 
 public interface IGeneralDAO<L, K> {
-	L create(L entity); // thêm một thực thể
+	L create(L s); // thêm một thực thể
+
 
 	void update(L entity);
 

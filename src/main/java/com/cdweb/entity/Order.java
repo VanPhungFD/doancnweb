@@ -34,16 +34,12 @@ public class Order {
 	Double amount;
 	String description;
 	Integer status;
-	Integer phone;
+
 	
 
-	public Integer getPhone() {
-		return phone;
-	}
 
-	public void setPhone(Integer phone) {
-		this.phone = phone;
-	}
+
+
 
 	public Integer getStatus() {
 		return status;

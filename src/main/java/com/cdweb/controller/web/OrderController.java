@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,7 +16,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.cdweb.entity.Order;
 import com.cdweb.service.IOrderSevice;
-import com.cdweb.service.IRabbitmqService;
 import com.cdweb.service.impl.CartService;
 
 @Controller
@@ -29,8 +27,8 @@ public class OrderController {
 	@Autowired
 	private IOrderSevice orderService;
 
-	@Autowired
-	private IRabbitmqService rabbit;
+//	@Autowired
+//	private IRabbitmqService rabbit;
 
 	@GetMapping("/order/checkout")
 	public String checkOut(Model model,RedirectAttributes attributes) {
@@ -46,8 +44,8 @@ public class OrderController {
 
 	@PostMapping("/order/checkout")
 	public String checkOut(Model model, @Validated @ModelAttribute("order") Order or) {
-		// orderService.addOrderAndOrderDetail(or, cartService);
-		rabbit.converToSendRabbit(or, cartService);
+		 orderService.addOrderAndOrderDetail(or, cartService);
+	//	rabbit.converToSendRabbit(or, cartService);
 		cartService.clear();
 		return "redirect:/home/index";
 	}

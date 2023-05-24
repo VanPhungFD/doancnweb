@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.cdweb.entity.Product;
-import com.cdweb.service.IElasticSearch;
 import com.cdweb.service.IHttpService;
 import com.cdweb.service.IProductService;
 
@@ -24,8 +23,8 @@ public class ProductsAdminController {
 	@Autowired
 	private IProductService productService;
 
-	@Autowired
-	private IElasticSearch elastic;
+//	@Autowired
+//	private IElasticSearch elastic;
 
 	@Autowired
 	private IHttpService http;
@@ -59,7 +58,7 @@ public class ProductsAdminController {
 		productService.add(form);
 		
 		// thêm vào elastic server
-		elastic.documentElasticSearch(form);
+		//elastic.documentElasticSearch(form);
 		params.addAttribute("message", "Thêm mới thành công");
 		return "redirect:/admin/product/index"; // redirect lại để mất dữ liệu trên form
 	}
@@ -81,7 +80,7 @@ public class ProductsAdminController {
 		}
 		productService.update(form);
 		//update lên elasticSearch
-		elastic.updateElastic(form);
+	//	elastic.updateElastic(form);
 		params.addAttribute("message", "Cập nhật thành công");
 		return "redirect:/admin/product/edit/" + form.getId(); // redirect giữ lại dữ liệu
 	}
@@ -90,7 +89,7 @@ public class ProductsAdminController {
 	public String delete(Model model, RedirectAttributes params, @PathVariable("id") Integer id) {
 		productService.delete(id);
 		//xóa trên server ElasticSearch
-		elastic.deleteElastic(id);
+		//elastic.deleteElastic(id);
 		params.addAttribute("message", "Xóa thành công");
 		return "redirect:/admin/product/index";
 	}

@@ -1,4 +1,4 @@
-package com.cdweb;
+package com.cdweb.config;
 
 import java.io.IOException;
 import java.util.Properties;

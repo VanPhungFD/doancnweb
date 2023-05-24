@@ -15,7 +15,6 @@ import com.cdweb.entity.Category;
 import com.cdweb.entity.Product;
 import com.cdweb.service.ICategoryService;
 import com.cdweb.service.ICookieService;
-import com.cdweb.service.IElasticSearch;
 import com.cdweb.service.IHttpService;
 import com.cdweb.service.IMailService;
 import com.cdweb.service.IProductService;
@@ -40,21 +39,20 @@ public class ProductController {
 	@Autowired
 	private IHttpService httpService;
 	
-	@Autowired
-	private IElasticSearch elastic;
+//	@Autowired
+//	private IElasticSearch elastic;
 
 	@RequestMapping("/product/list-by-category/{cId}")
 	public String listByCategory(@PathVariable("cId") Integer id, Model model) {
 		Category category = service.findById(id);
-		//List<Product> listProduct = category.getProducts();
-		// lọc những sản phẩm theo loại từ server ElasticSearch
-		model.addAttribute("list", elastic.searchElasticProductByCate(category.getId()));
+		List<Product> listProduct = category.getProducts();
+		model.addAttribute("list",listProduct);
 		return "product/list";
 	}
 
 	@RequestMapping("/product/list-by-keywords")
 	public String listByKeyWords(@RequestParam("keywords") String keywords, Model model) {
-		model.addAttribute("list", elastic.searchElastiProduct(keywords));
+	//	model.addAttribute("list", elastic.searchElastiProduct(keywords));
 		return "product/list";
 	}
 

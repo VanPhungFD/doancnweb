@@ -48,7 +48,7 @@ public class AccountController {
 		return "account/login";
 	}
 
-	@PostMapping("/account/login")
+	@PostMapping("/account/login") // lúc ấn submit
 	public String login(Model model, @RequestParam("username") String username,
 			@RequestParam("password") String password,
 			@RequestParam(name = "remember", defaultValue = "false") boolean remember) {

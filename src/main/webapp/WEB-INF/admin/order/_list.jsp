@@ -21,7 +21,7 @@
 					<td>${item.id}</td>
 					<td>${item.customer.id}</td>
 					<td>${item.address}</td>
-					<td>${item.phone}</td>
+					<%--<td>${item.phone}</td>--%>
 					<td>${item.orderDate}</td>
 					<td>$<f:formatNumber value="${item.amount}" pattern="#,###.00" /></td>
 					<td class="text-center"><a href="${prefix}/edit/${item.id}"

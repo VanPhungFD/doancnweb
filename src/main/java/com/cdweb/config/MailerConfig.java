@@ -1,4 +1,4 @@
-package com.cdweb;
+package com.cdweb.config;
 
 import java.util.Properties;
 

@@ -1,19 +1,6 @@
 package com.cdweb.consumer;
 
-import java.util.Date;
-
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import com.cdweb.dao.IOrderDAO;
-import com.cdweb.dao.IOrderDetailDAO;
-import com.cdweb.entity.Customer;
-import com.cdweb.entity.Order;
-import com.cdweb.entity.OrderDetail;
-import com.cdweb.entity.Product;
-import com.cdweb.model.OrderDetails;
-import com.cdweb.model.OrderModel;
 
 @Component
 public class Consumer {

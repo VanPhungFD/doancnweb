@@ -52,13 +52,13 @@
 						placeholder="Vui lòng nhập họ tên" required="required"
 						class="form-control" />
 				</div>
-				<div class="form-group col-sm-6">
+			<%--	<div class="form-group col-sm-6">
 					<label>Số điện thoại</label>
 					<form:input path="phone" class="form-control"
 						placeholder="Vui lòng nhập số điện thoại" required="required"
 						pattern="(03|05|07|08|09)+([0-9]{8})\b"
 					 />
-				</div>
+				</div>--%>
 			</div>
 			<div class="row">
 				<div class="form-group col-sm-6">

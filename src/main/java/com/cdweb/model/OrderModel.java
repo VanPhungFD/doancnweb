@@ -4,23 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.cdweb.entity.Customer;
-import com.cdweb.entity.Order;
-import com.cdweb.entity.OrderDetail;
 
 public class OrderModel {
 	private String address;
 	private Double amount;
 	private String description;
 	private Integer status;
-	private Integer phone;
-	
-	public Integer getPhone() {
-		return phone;
-	}
 
-	public void setPhone(Integer phone) {
-		this.phone = phone;
-	}
+	
+
 
 	private Customer customer;
 	List<OrderDetails> orderDetails = new ArrayList<OrderDetails>();
