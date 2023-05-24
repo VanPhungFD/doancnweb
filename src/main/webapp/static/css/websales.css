@@ -1,0 +1,157 @@
+.estore-prod{
+	height: 150px !important;
+	max-width: 100%;
+}
+.detail-img{
+	max-width: 100%;
+	max-height: 400px;
+}
+.detail-info li{
+	font-variant: small-caps;
+	font-size: larger;
+	line-height: 30px;
+}
+.thumb-img{
+	width: 60px;
+	height: 60px;
+	border-radius: 5px;
+	margin: 3px;
+	padding: 3px;
+	box-shadow: 0px 0px 2px blue; 
+}
+.thumb-img:hover{
+	box-shadow: 0px 0px 3px red; 
+}
+.pro-icon-wraper{
+	position: relative;
+}
+.pro-icon{
+	position: absolute;
+	top:0px;
+	right:0px;
+}
+
+}
+/*-----HEADER-----*/
+header{
+	position: relative;
+}
+header .nn-company{
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+}
+header .nn-company h1{
+	font-family: tahoma;
+	font-weight: bold;
+	color: white;
+	font-size: 45px;
+	text-shadow: 0 0 2px black;
+}
+header .nn-company h4{
+	font-family: tahoma;
+	letter-spacing: 2.2px;
+}
+/*-----MENU-----*/
+.navbar a{
+	font-variant: small-caps;
+}
+.nn-lang a{
+	padding: 10px 0 0 10px !important;
+}
+/*-----ASIDE-----*/
+aside .panel-title{
+	font-variant: small-caps;
+	font-weight: bolder !important;
+}
+aside .nn-cart{
+	font-variant: small-caps;
+}
+aside .nn-cart img{
+	width: 60px;
+}
+aside .nn-cart ul{
+	list-style-type: circle;
+	padding-left: 0px;
+}
+/*-----FOOTER-----*/
+footer a{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*-----product/list.jsp-----*/
+.nn-prod .panel-title{
+	font-size: smaller;
+	font-variant: small-caps;
+	font-weight: bolder;
+}
+.nn-prod .panel-body img {
+	height: 150px;
+	max-width: 99%
+}
+.nn-prod .panel-footer{
+	font-family: impact;
+	font-size: 20px;
+	color: gray;
+	padding: 5px;
+}
+.nn-prod .panel{
+	position: relative;
+}
+.nn-prod .panel>img{
+	position: absolute;
+	top:0;
+	right: 0;
+}
+
+.nn-detail .panel-body{
+	font-size: larger;
+	font-variant: small-caps;
+	line-height: 28px;
+}
+.nn-detail .panel-body img{
+	max-width: 99%;
+	max-height: 200px;
+}
+
+.nn-detail .panel-body strong{
+	display: inline-block;
+	width: 120px;
+	color: brown;
+}
+.nn-detail .panel-body ul{
+	list-style: circle;
+	padding-left: 0;
+}
+
+.nn-detail-relatives img{
+	width: 100px;
+	height: 100px;
+	box-shadow: 0 0 2px gray;
+	border-radius: 5px;
+	background-color: white;
+	padding: 5px;
+	margin: 5px;
+}
+.nn-detail-relatives img:hover{
+	box-shadow: 0 0 5px red;
+}
+
+/*-----Form & Validation-----*/
+[id$=errors]{
+	color:red;
+	font-style: italic;
+	background-image: url("/static/images/anifire.gif");
+	background-repeat: no-repeat;
+	padding-left: 15px;
+	margin-left: 5px;
+}
+.form-group label:first-child{
+	font-variant: small-caps;
+}
+.img-wait{
+    text-align: center;
+    float: right;
+    margin-left: 10px;
+    margin: 190px 370px 20px 50px;
+}
