@@ -99,7 +99,7 @@
   </head>
   <body>
     <div class="testbox">
-      <form action="/">
+      <form id="feedbackForm" action="/">
         <h1>Customer Feedback Form</h1>
         <p>Please take a few minutes to give us feedback about our service by filling in this short Customer Feedback Form. We are conducting this research in order to measure your level of satisfaction with the quality of our service. We thank you for your participation.</p>
         <hr />
@@ -147,11 +147,11 @@
           </tr>
           <tr>
             <td class="first-col">How satisfied are you with the customer support?</td>
-            <td><input type="radio" value="none" name="name" /></td>
-            <td><input type="radio" value="none" name="name" /></td>
-            <td><input type="radio" value="none" name="name" /></td>
-            <td><input type="radio" value="none" name="name" /></td>
-            <td><input type="radio" value="none" name="name" /></td>
+            <td><input type="radio" value="none" name="support" /></td>
+            <td><input type="radio" value="none" name="support" /></td>
+            <td><input type="radio" value="none" name="support" /></td>
+            <td><input type="radio" value="none" name="support" /></td>
+            <td><input type="radio" value="none" name="support" /></td>
           </tr>
           <tr>
             <td class="first-col">Would you recommend our product / service to other people?</td>
@@ -166,20 +166,68 @@
         <textarea rows="5"></textarea>
         <h4>Email</h4>
         <small>Only if you want to hear more from us.</small>
-        <input class="email" type="text" name="name" />
+        <input class="email" type="text" name="email" />
         <div class="btn-block">
           <button type="submit" href="/">Send Feedback</button>
         </div>
       </form>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.all.min.js"></script>
+   <script>
+     function displayThankYouMessage(event) {
+       event.preventDefault(); // Prevent default form submission behavior
 
-      <script>
-          function submitFeedback() {
-              // Thực hiện xử lý logic gửi phản hồi tại đây
+       var rate = document.getElementsByName("rate");
+       var satisfied = document.getElementsByName("satisfied");
+       var prices = document.getElementsByName("prices");
+       var timeliness = document.getElementsByName("timeliness");
+       var support = document.getElementsByName("support");
+       var recommend = document.getElementsByName("recommend");
+       var feedback = document.querySelector("textarea");
+       var email = document.getElementsByName("email")[0];
 
-              // Thay đổi nội dung của trang
-              document.getElementById("feedbackForm").innerHTML = "<h1>Thank You</h1><p>Thank you for your feedback!</p>";
-          }
-      </script>
-    </div>
+       // Check if all fields have been filled
+       if (!checkFields(rate) || !checkFields(satisfied) || !checkFields(prices) || !checkFields(timeliness) || !checkFields(support) || !checkFields(recommend) || feedback.value.trim() === '') {
+         Swal.fire({
+           title: "Please fill in this field!",
+           text: "Please complete all fields.",
+           icon: "warning",
+           confirmButtonText: "OK"
+         });
+         return false; // Prevent form submission
+       }
+
+       // Further processing for valid data
+       // ...
+
+       // Display success message
+       Swal.fire({
+         title: "Thank You!",
+         text: "We have received your feedback.",
+         icon: "success",
+         confirmButtonText: "OK"
+       }).then((result) => {
+         if (result.isConfirmed) {
+           clearForm(); // Clear input fields
+         }
+       });
+     }
+
+     function checkFields(fields) {
+       for (var i = 0; i < fields.length; i++) {
+         if (fields[i].checked) {
+           return true;
+         }
+       }
+       return false;
+     }
+
+     function clearForm() {
+       document.getElementById("feedbackForm").reset();
+     }
+
+     // Listen for form submit event
+     document.getElementById("feedbackForm").addEventListener("submit", displayThankYouMessage);
+   </script>
   </body>
 </html>

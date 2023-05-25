@@ -2,6 +2,6 @@
 
 <div class="panel panel-default text-center">
 	<div class="panel-footer">
-		Administration &copy;2020. All rights reserved.
+		Administration &copy;2023. All rights reserved.
 	</div>
 </div>

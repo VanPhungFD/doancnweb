@@ -53,6 +53,8 @@ public class ProductController {
 	@RequestMapping("/product/list-by-keywords")
 	public String listByKeyWords(@RequestParam("keywords") String keywords, Model model) {
 	//	model.addAttribute("list", elastic.searchElastiProduct(keywords));
+		List<Product> productList = serviceProduct.findByKeywords(keywords);
+		model.addAttribute("list", productList);
 		return "product/list";
 	}
 

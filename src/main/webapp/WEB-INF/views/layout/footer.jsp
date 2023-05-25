@@ -10,7 +10,7 @@
 			Feedback</a> | <a href="#"><span
 			class="glyphicon glyphicon-question-sign"></span> FAQs</a>
 	</div>
-	<div class="panel-footer">Spring Boot &copy;2020. All rights
+	<div class="panel-footer">Spring Boot &copy;2023. All rights
 		reserved.</div>
 </div>
 
