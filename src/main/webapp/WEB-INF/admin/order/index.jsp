@@ -9,7 +9,7 @@
 <!-- tabs -->
 <ul class="nav nav-tabs">
 	<li class="active">
-		<a data-toggle="tab" href="#edit"> 
+		<a data-toggle="tab" href="#edit">
 			<span class="glyphicon glyphicon-edit"></span> Chỉnh sửa
 		</a>
 	</li>

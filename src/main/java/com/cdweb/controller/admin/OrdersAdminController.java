@@ -35,7 +35,7 @@ public class OrdersAdminController {
 
 	@RequestMapping("create")
 	public String create(Model model, RedirectAttributes params, @Validated Order form,
-			BindingResult errors) {
+						 BindingResult errors) {
 		if (errors.hasErrors()) {
 			model.addAttribute("message", "Vui lòng không bỏ trống các trường bên trên");
 			model.addAttribute("list", orderService.findAll());
@@ -48,7 +48,7 @@ public class OrdersAdminController {
 
 	@RequestMapping("update")
 	public String update(Model model, RedirectAttributes params, @Validated  Order form,
-			BindingResult errors) {
+						 BindingResult errors) {
 		if (errors.hasErrors()) {
 			model.addAttribute("message", "Vui lòng không bỏ trống bên dưới");
 			model.addAttribute("list", orderService.findAll());
