@@ -1,9 +1,11 @@
+<%@ page pageEncoding="utf-8"%>
+<%@ include file="/common/taglib.jsp"%>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About Me Profile card || Learning Robo</title>
+    <title>About Me Profile card || Website_SellerOnline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/static/css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -20,7 +22,7 @@
               </div>
             </div>
 
-            <h2>Learning Robo</h2>
+            <h2>Website_SellerOnline</h2>
             <h3>Web developer</h3>
           </div>
 
@@ -36,17 +38,17 @@
 
       <div class = "about-right">
         <h1>Hello<span>!</span></h1>
-        <h2>Here's who I am & what I do</h2>
+        <h2>Chào mừng bạn đến với website của chúng tôi !!!</h2>
         <div class = "about-btns">
           <button type = "button" class = "btn btn-pink">resume / CV</button>
           <button type = "button" class = "btn btn-white">Git hub</button>
         </div>
 
         <div class = "about-para">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, aspernatur possimus ullam quaerat, laboriosam ex voluptate aliquid laborum, obcaecati ratione accusamus! Ea nisi modi dolor nam numquam? Temporibus, molestias amet.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iure tempora alias laudantium sapiente impedit!</p>
+          <p>Website phục vụ cho đồ án môn chuyên đề Web - về chủ đề website bán hàng online.</p>
+          <p>Website bán hàng online dành cho các tín đồ yêu công nghệ!</p>
         </div>
-        <div class="credit">Made with <span style="color:tomato">❤</span> by <a href="https://www.learningrobo.com/">Learning Robo</a></div>
+        <div class="credit">Made in <span style="color:tomato">CDWEB</span> From <a href="https://github.com/VanPhungFD/chuyendeweb/">ShopOnline</a></div>
       </div>
     </div>
   </body>

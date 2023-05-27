@@ -1,3 +1,5 @@
+
+<%@ include file="/common/taglib.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -49,19 +51,25 @@
 <div class="container">
     <h2>Contact Form</h2>
     <form id="contactForm" action="submit.jsp" method="post" onsubmit="displayThankYouMessage(); return false;">
-        <label for="fname">First Name</label>
+        <label for="fname">Họ</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Last Name</label>
+        <label for="lname">Tên</label>
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="country">Country</label>
+        <label for="email">Email</label>
+                <input type="text" id="email" name="youremail" placeholder="Your Email name..">
+        <label for="country">Quốc Gia</label>
         <select id="country" name="country">
             <option value="">-- Select country --</option>
             <option value="australia">Australia</option>
             <option value="canada">Canada</option>
             <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+                        <option value="Việt Nam">USA</option>
+                        <option value="nhật bản">Canada</option>
+                                    <option value="china">USA</option>
         </select>
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Để lại lời nhắn cho chúng tôi.." style="height:200px"></textarea>
         <div class="form-group">
             <input type="submit" value="Submit">
         </div>

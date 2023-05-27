@@ -1,3 +1,6 @@
+<%@ page pageEncoding="utf-8"%>
+<%@ include file="/common/taglib.jsp"%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -101,9 +104,9 @@
     <div class="testbox">
       <form id="feedbackForm" action="/">
         <h1>Customer Feedback Form</h1>
-        <p>Please take a few minutes to give us feedback about our service by filling in this short Customer Feedback Form. We are conducting this research in order to measure your level of satisfaction with the quality of our service. We thank you for your participation.</p>
+        <p>Vui lòng dành vài phút để cung cấp cho chúng tôi phản hồi về dịch vụ của chúng tôi bằng cách điền vào Mẫu phản hồi khách hàng ngắn này. Chúng tôi đang tiến hành nghiên cứu này để đo lường mức độ hài lòng của bạn với chất lượng dịch vụ của chúng tôi. Chúng tôi cảm ơn bạn đã tham gia.</p>
         <hr />
-        <h3>Overall experience with our service</h3>
+        <h3>Trải nghiệm tổng thể với dịch vụ của chúng tôi</h3>
         <table>
           <tr>
             <th class="first-col"></th>
@@ -114,7 +117,7 @@
             <th>Very Poor</th>
           </tr>
           <tr>
-            <td class="first-col">How would you rate your overall experience with our service?</td>
+            <td class="first-col">Bạn đánh giá trải nghiệm tổng thể của mình với dịch vụ của chúng tôi như thế nào?</td>
             <td><input type="radio" value="none" name="rate" /></td>
             <td><input type="radio" value="none" name="rate" /></td>
             <td><input type="radio" value="none" name="rate" /></td>
@@ -122,7 +125,7 @@
             <td><input type="radio" value="none" name="rate" /></td>
           </tr>
           <tr>
-            <td class="first-col">How satisfied are you with the comprehensiveness of our offer?</td>
+            <td class="first-col">Vui lòng cho biết mức độ hài lòng của bạn với tính toàn diện của ưu đãi của chúng tôi?</td>
             <td><input type="radio" value="none" name="satisfied" /></td>
             <td><input type="radio" value="none" name="satisfied" /></td>
             <td><input type="radio" value="none" name="satisfied" /></td>
@@ -130,7 +133,7 @@
             <td><input type="radio" value="none" name="satisfied" /></td>
           </tr>
           <tr>
-            <td class="first-col">How would you rate our prices?</td>
+            <td class="first-col">Bạn đánh giá về giá cả của hàng của chúng tôi như thế nào?</td>
             <td><input type="radio" value="none" name="prices" /></td>
             <td><input type="radio" value="none" name="prices" /></td>
             <td><input type="radio" value="none" name="prices" /></td>
@@ -138,7 +141,7 @@
             <td><input type="radio" value="none" name="prices" /></td>
           </tr>
           <tr>
-            <td class="first-col">How satisfied are you with the timeliness of order delivery?</td>
+            <td class="first-col">Bạn hài lòng như thế nào với tính kịp thời của việc giao hàng?</td>
             <td><input type="radio" value="none" name="timeliness" /></td>
             <td><input type="radio" value="none" name="timeliness" /></td>
             <td><input type="radio" value="none" name="timeliness" /></td>
@@ -146,7 +149,7 @@
             <td><input type="radio" value="none" name="timeliness" /></td>
           </tr>
           <tr>
-            <td class="first-col">How satisfied are you with the customer support?</td>
+            <td class="first-col">Bạn hài lòng với dịch vụ hỗ trợ khách hàng như thế nào?</td>
             <td><input type="radio" value="none" name="support" /></td>
             <td><input type="radio" value="none" name="support" /></td>
             <td><input type="radio" value="none" name="support" /></td>
@@ -154,7 +157,7 @@
             <td><input type="radio" value="none" name="support" /></td>
           </tr>
           <tr>
-            <td class="first-col">Would you recommend our product / service to other people?</td>
+            <td class="first-col">Bạn có muốn giới thiệu sản phẩm/dịch vụ của chúng tôi cho người khác không?</td>
             <td><input type="radio" value="none" name="recommend" /></td>
             <td><input type="radio" value="none" name="recommend" /></td>
             <td><input type="radio" value="none" name="recommend" /></td>
@@ -162,10 +165,10 @@
             <td><input type="radio" value="none" name="recommend" /></td>
           </tr>
         </table>
-        <h4>What should we change in order to live up to your expectations?</h4>
+        <h4>Chúng tôi nên thay đổi điều gì để đáp ứng mong đợi của bạn?</h4>
         <textarea rows="5"></textarea>
         <h4>Email</h4>
-        <small>Only if you want to hear more from us.</small>
+        <small>Chỉ khi bạn muốn nghe nhiều hơn từ chúng tôi!!!</small>
         <input class="email" type="text" name="email" />
         <div class="btn-block">
           <button type="submit" href="/">Send Feedback</button>
@@ -189,8 +192,8 @@
        // Check if all fields have been filled
        if (!checkFields(rate) || !checkFields(satisfied) || !checkFields(prices) || !checkFields(timeliness) || !checkFields(support) || !checkFields(recommend) || feedback.value.trim() === '') {
          Swal.fire({
-           title: "Please fill in this field!",
-           text: "Please complete all fields.",
+           title: "Vui lòng điền đầy đủ!",
+           text: "Vui lòng điền đầy đủ thông tin trong các trường!",
            icon: "warning",
            confirmButtonText: "OK"
          });
@@ -203,7 +206,7 @@
        // Display success message
        Swal.fire({
          title: "Thank You!",
-         text: "We have received your feedback.",
+         text: "Chúc tôi đã nhận được phản hồi của bạn!.",
          icon: "success",
          confirmButtonText: "OK"
        }).then((result) => {

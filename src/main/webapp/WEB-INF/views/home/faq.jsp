@@ -1,5 +1,6 @@
+<%@ page pageEncoding="utf-8"%>
+<%@ include file="/common/taglib.jsp"%>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 
@@ -47,7 +48,7 @@
 
                 <div class=“accordion-title” data-tab=“item4”>
 
-                  <h3>Free DDOS Protection <i class=“fa fa-chevron-down”></i></h3>
+                  <h3>Website bán hàng là gì  <i class=“fa fa-chevron-down”></i></h3>
 
                 </div>
 
@@ -55,9 +56,10 @@
 
                   <p>
 
-                    Unlike other providers who charge extra for DDoS protection, All of our VPS
-
-                    servers comes
+                   Website bán hàng là trang Web cho phép doanh nghiệp và khách hàng
+                   có thể tiến hành việc mua bán sản phẩm/ dịch vụ trực tuyến. Cụ thể,
+                   khi truy cập vào các Website này, bạn có thể xem thông tin sản phẩm,
+                    tìm kiếm các sản phẩm cần mua, đặt hàng và thanh toán nhanh chóng.
 
                   </p>
 
@@ -71,19 +73,14 @@
 
                 <div class=“accordion-title” data-tab=“item2”>
 
-                  <h3>What is Windows VPS? <i class=“fa fa-chevron-down”></i></h3>
+                  <h3>Thanh toán như thế nào? <i class=“fa fa-chevron-down”></i></h3>
 
                 </div>
 
                 <div class=“accordion-content” id=“item2”>
 
                   <p>
-
-                    With a Windows VPS server, you will get a Remote Desktop connection within a few
-
-                    minutes. You can run Windows applications such as IIS, SQL, Microsoft Exchange
-
-                    or any software like Docking,
+Bạn có thể thanh toán với nhiều cách khác nhau trong tương lai! (development ^^)
 
                   </p>
 
@@ -97,7 +94,7 @@
 
                 <div class=“accordion-title” data-tab=“item3”>
 
-                  <h3>Payment Options <i class=“fa fa-chevron-down”></i></h3>
+                  <h3>Thắc mắc và ý kiến góp ý khác <i class=“fa fa-chevron-down”></i></h3>
 
                 </div>
 
@@ -105,10 +102,9 @@
 
                   <p>
 
-                    Unlike most other providers you don’t have to pay with just Credit Card or
-
-                    PayPal. You can also
-
+                   Khách hàng có thể phản hồi và góp ý kiến
+                   cho chúng tôi khi nhập thông tin và nội dung
+                   đóng góp tại mục liên hệ và phản hồi!^^
                   </p>
 
                 </div>
@@ -121,7 +117,7 @@
 
                 <div class=“accordion-title” data-tab=“item1”>
 
-                  <h3>Why FutureRDP? <i class=“fa fa-chevron-down”></i></h3>
+                  <h3>Tại sao nên lựa chọn chúng tôi cho việc mua sắm của bạn?! <i class=“fa fa-chevron-down”></i></h3>
 
                 </div>
 
@@ -129,14 +125,8 @@
 
                   <p>
 
-                    Germany, Netherlands, and Canada. We have a range
-
-                    of different solutions for different purposes such as SSD VPS and Storage
-
-                    servers. All servers are equipped with RAID10 only SSD drives and FREE DDoS
-
-                    Protection!
-
+                   Tại đây, chúng tôi cung cấp đa dạng các loại sản phẩm
+ mẫu mã vô cùng sắc nét, đẹp xịn và hợp lý với túi tiền của bạn! Hãy đến với chúng tôi - nơi khách hàng là Thượng đế^^
                   </p>
 
                 </div>

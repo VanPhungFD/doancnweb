@@ -23,10 +23,10 @@
 					<h4>
 						<a class="plain" href="http://tanthanhdanh.vn/lua-chon-cau-hinh/"><span
 							style="color: #008000;"></span></a><a style="color: #008000;"
-							href="/lua-chon-cau-hinh/">Lựa chọn cấu hình</a>
+							href="/lua-chon-cau-hinh/">Chọn cấu hình yêu thích</a>
 					</h4>
 					<p>
-						<a href="/lua-chon-cau-hinh/">Lựa chọn sản phẩm máy theo ý bạn</a>
+						<a href="/Build-cau-hinh/">Build PC - Mua sản phẩm theo lựa chọn của bạn</a>
 					</p>
 				</div>
 			</div>
@@ -48,8 +48,8 @@
 				<div class="icon-box-text last-reset">
 					<h4>Hotline</h4>
 					<p>
-						Nhanh chóng - Dễ dàng<br> <span style="color: #ff0000;"><strong>0982
-								78 58 28</strong></span>
+						Nhanh chóng - Dễ dàng<br> <span style="color: #ff0000;"><strong>0999
+								89 89 89</strong></span>
 					</p>
 				</div>
 			</div>
@@ -84,7 +84,7 @@
 					</h4>
 					<p>
 						<a href="https://goo.gl/maps/xrek3MUg7XsCfkka8" target="_blank"
-							rel="noopener noreferrer">25 MAN THIỆN PHƯỜNG HIỆP PHÚ QUẬN 9</a>
+							rel="noopener noreferrer">309 Đ. Võ Văn Ngân, Linh Chiểu, Thủ Đức, Thành phố Hồ Chí Minh 700000</a>
 					</p>
 				</div>
 			</div>
