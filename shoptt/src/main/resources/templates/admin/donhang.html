@@ -1,0 +1,132 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styleadmin.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+    <link href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script type="text/javascript" th:src="@{/jsadmin/link.js}"></script>
+    <script type="text/javascript" th:src="@{/jsadmin/menuadmin.js}"></script>
+    <script type="text/javascript" th:src="@{/jsadmin/donhang.js}"></script>
+    <link href="../static/css/styleadmin.css" th:href="@{/css/styleadmin.css}" rel="stylesheet" />
+
+    <script>
+        window.onload = function(){
+            loadMenuAdmin();
+            loadAllTrangThai();
+            loadAllDonHang();
+            checkRoleAdmin();
+        }
+    </script>
+</head>
+<body id="body-pd">
+<header class="header" id="header">
+    <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+    <div class="header_img"> <img id="img-login" src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+</header>
+<div class="l-navbar" id="nav-bar"></div>
+<div class="main-component">
+    <div class="col-sm-12 header-sp">
+        <p class="loctheongay">Lọc theo ngày</p>
+        <label>Từ ngày</label>
+        <input type="date" id="start">
+        <label>Đến ngày</label>
+        <input type="date" id="end">
+        <select id="listtrangthai">
+            <option value="">---loại trạng thái---</option>
+        </select>
+        <button onclick="searchAll()" class="btn-filter btn-primary"><i class="fa fa-filter"></i> Lọc</button>
+    </div>
+    <div class="col-sm-12">
+        <table id="example" class="table table-striped">
+            <thead>
+            <tr>
+                <th>id đơn hàng</th>
+                <th>ngày tạo</th>
+                <th>trạng thái đơn hàng</th>
+                <th>tổng tiền</th>
+                <th>loại thanh toán</th>
+                <th>ghi chú đơn hàng</th>
+                <th>người đặt</th>
+                <th>địa chỉ nhận</th>
+                <th>cập nhật trạng thái</th>
+                <th>xem chỉ tiết đơn hàng</th>
+            </tr>
+            </thead>
+            <tbody id="listinvoice">
+            <tr>
+                <td>#2342</td>
+                <td>2023-02-19</td>
+                <td>đang chờ xử lý</td>
+                <td>2,500,000đ</td>
+                <td>thanh toán online</td>
+                <td>chỉ nhận hàng tối</td>
+                <td>hoàng thùy linh</td>
+                <td>14 võ trí thanh, nam đàn, nghệ an</td>
+                <td><button data-bs-toggle="modal" data-bs-target="#capnhatdonhang" class="btn btn-primary"><i class="fa fa-edit"></i> Cập nhật</button></td>
+                <td><button class="btn btn-danger"><i class="fa fa-trash"></i> hủy đơn</button></td>
+                <td><button data-bs-toggle="modal" data-bs-target="#chitietdonhang" class="btn btn-success"><i class="fa fa-list"></i> chi tiết</button></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="modal" id="chitietdonhang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">Chi tiết đơn hàng</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ảnh sản phẩm</th>
+                                <th>tên sản phẩm</th>
+                                <th>số lượng</th>
+                                <th>giá</th>
+                            </tr>
+                            </thead>
+                            <tbody id="listorderdt">
+                            <tr>
+                                <td><img src="image/detail.jpeg" class="img-invoice-detail"></td>
+                                <td>quần ống rộng</td>
+                                <td>3</td>
+                                <td>4,500,000đ</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="capnhatdonhang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">Chi tiết đơn hàng</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body">
+                        <input type="hidden" readonly id="iddonhang" class="form-control">
+                        <select id="trangthaicp" class="form-control">
+                            <option>Chọn trạng thái</option>
+                        </select>
+                        <div id="btnupdatetrangthai">
+                            <button onclick="openupdatedon()" class="btn btn-primary form-control action-btn">Cập nhật</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

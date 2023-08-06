@@ -1,0 +1,90 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/link.js}"></script>
+    <script type="text/javascript" th:src="@{/js/menu.js}"></script>
+    <script type="text/javascript" th:src="@{/js/checkout.js}"></script>
+    <script type="text/javascript" th:src="@{/js/cart.js}"></script>
+
+    <script>
+        window.onload = function(){
+            loadMenu();
+            loadFooter();
+            initCheckout();
+            checkRoleUser();
+        }
+    </script>
+</head>
+<body>
+<!-- menu -->
+<div id="menu"></div>
+<div class="content">
+    <div class="container-fuild cart-banner">
+        <div class="container">
+            <h4>Checkout</h4>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row table-cart">
+            <div class="col-md-8">
+                <div class="title-checkout">
+                    <p><i class="fa fa-info-circle" aria-hidden="true"></i> Thông tin nhận hàng của bạn</p>
+                </div>
+                <hr>
+                <table class="table table-checkout">
+                    <tr>
+                        <td class="bold-checkout">Họ tên: </td>
+                        <td id="hotencheck">Lê tùng vân</td>
+                    </tr>
+                    <tr>
+                        <td class="bold-checkout">Số điện thoại: </td>
+                        <td id="sdtcheck">0981263812</td>
+                    </tr>
+                    <tr>
+                        <td class="bold-checkout">Tổng tiền đơn hàng: </td>
+                        <td id="tongtien" class="money-checkout">4.500.000đ</td>
+                    </tr>
+                    <tr>
+                        <td class="bold-checkout">Phí ship: </td>
+                        <td class="money-checkout">30.000đ</td>
+                    </tr>
+                    <tr>
+                        <td class="bold-checkout">Số lượng sản phẩm: </td>
+                        <td id="tongsl">3 sản phẩm</td>
+                    </tr>
+                    <tr>
+                        <td onclick="window.location.href=linktaikhoan" colspan="2"><button class="btn-thaydoithongtin">Thay đổi thông tin người nhận</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4 chitietcheckout">
+                <h5 class="title-chitietdathang tongtiendonhang">Ghi chú đơn hàng</h5>
+                <input id="noidungtt" type="text" placeholder="ghi chú đơn hàng" class="form-control">
+                <h5 class="title-chitietdathang">Chọn địa chỉ nhận hàng</h5>
+                <div id="listdcnhanhang">
+                    <label class="radio-custom">Địa chỉ: Nam từ liêm, hà nội
+                        <input type="radio" name="radio" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <button onclick="window.location.href=linktaikhoan" href="" class="add-dia-chi">Thêm địa chỉ nhận hàng</button>
+                <button onclick="thanhtoantructiep()" class="add-dia-chi">Thanh toán khi nhận hàng</button>
+                <button onclick="requestPayMentMomo()" class="btn-momo"><img src="../images/momo.png" class="pay-momo"> Thanh toán bằng momo</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div id="footer"></div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/link.js"></script>
+
+    <script type="text/javascript" th:src="@{/js/link.js}"></script>
+</head>
+<body>
+
+</body>
+<script>
+    var urls = document.URL
+    var uls = new URL(urls)
+    var orderId = uls.searchParams.get("orderId");
+    var requestId = uls.searchParams.get("requestId");
+    console.log(orderId)
+    console.log(requestId)
+
+    window.onload = function () {
+        checkPayment();
+    }
+
+    async function checkPayment() {
+        var url = 'http://'+urlFirst+'/api/checkPayment?orderId=' + orderId + '&requestId=' + requestId
+        var token = localStorage.getItem("token");
+        const res = await fetch(url, {
+            method: 'GET',
+            headers: new Headers({
+                'Authorization': 'Bearer ' + token
+            })
+        });
+        var result = await res.json();
+        var list = JSON.parse(localStorage.getItem("cartshoptt"));
+        var tongmh = 0;
+        for(i=0; i<list.length; i++){
+            tongmh = Number(list[i].quantity) + Number(tongmh);
+        }
+        var invoice ={
+            "createdDate":result.createdDate,
+            "totalAmount":result.totalAmount,
+            "payType":result.payType,
+            "numOfProduct":tongmh,
+            "note":sessionStorage.getItem("noidungnhan"),
+            "addressUser":{
+                "id":sessionStorage.getItem("iddcnhanhang")
+            },
+            "trangThai":{
+                "id":result.trangThai.id
+            }
+        }
+        console.log(invoice)
+        if (result != null) {
+            localStorage.removeItem("iddcnhanhang");
+            localStorage.removeItem("noidungnhan");
+
+            var urlinvoice = 'http://'+urlFirst+'/api/user/addInvoice'
+            const resp = await fetch(urlinvoice, {
+                method: 'POST',
+                headers: new Headers({
+                    'Authorization': 'Bearer ' + token,
+                    'Content-Type': 'application/json'
+                }),body: JSON.stringify(invoice)
+            });
+            var invoiceResult = await resp.json();
+
+            // chi tiet hoa don
+            for(i=0; i<list.length; i++){
+                var detail = {
+                    "price":list[i].price,
+                    "quantity":list[i].quantity,
+                    "totalAmount":list[i].price * list[i].quantity,
+                    "product":{
+                        "id":list[i].id
+                    },
+                    "invoice":{
+                        "id":invoiceResult.id
+                    }
+                }
+                var urlinvoice = 'http://'+urlFirst+'/api/user/addDetailInvoice'
+                const resp = await fetch(urlinvoice, {
+                    method: 'POST',
+                    headers: new Headers({
+                        'Authorization': 'Bearer ' + token,
+                        'Content-Type': 'application/json'
+                    }),body: JSON.stringify(detail)
+                });
+            }
+
+            alert("thanh toán thành công!")
+            window.location.replace(linkhistoryorder);
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,114 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <!-- <script src="js/category.js"></script> -->
+
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/link.js}"></script>
+    <script type="text/javascript" th:src="@{/js/menu.js}"></script>
+    <script type="text/javascript" th:src="@{/js/product.js}"></script>
+
+    <script>
+        window.onload = function(){
+            loadMenu();
+            loadFooter();
+            loadNewProduct(0);
+            // loadCategoryHeader();
+        }
+    </script>
+</head>
+<body>
+<!-- menu -->
+<div id="menu"></div>
+<div class="content">
+    <div class="container">
+        <ul id="myTab" role="tablist">
+            <li class="nav-item tab-li" role="presentation">
+                <button style="color: #b5ae9a;" onclick="checkSpMơi()" class="active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Sản phẩm mới</button>
+            </li>
+            <li class="nav-item tab-li" role="presentation">
+                <button onclick="loadspbanchay(0);" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Sản phẩm bán chạy</button>
+            </li>
+        </ul>
+        <div class="tab-content accordion" id="myTabContent">
+            <div class="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-md-10 list-item row" id="listNewProduct">
+<!--                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 signle-item" >-->
+<!--                            <a href=""><img class="img-item" src="image/item.jpg"></a>-->
+<!--                            <div class="small-image">-->
+<!--                                <img src="image/detail.jpeg">-->
+<!--                                <img src="image/detail.jpeg">-->
+<!--                            </div>-->
+<!--                            <div class="content-item-signle">-->
+<!--                                <a href=""><p class="name-signle-item">áo thun cao cấp chính hãng</p>-->
+<!--                                    <p style="text-align: center;" class="price-item">4.500.000đ</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="paginationss">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination" id="listpage">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade accordion-item" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+                <div class="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="row">
+                        <div class="col-md-10 list-item row" id="listspbanchay">
+<!--                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 signle-item" >-->
+<!--                                <a href=""><img class="img-item" src="image/item.jpg"></a>-->
+<!--                                <div class="small-image">-->
+<!--                                    <img src="image/detail.jpeg">-->
+<!--                                    <img src="image/detail.jpeg">-->
+<!--                                </div>-->
+<!--                                <div class="content-item-signle">-->
+<!--                                    <a href=""><p class="name-signle-item">áo thun cao cấp chính hãng</p>-->
+<!--                                        <p style="text-align: center;" class="price-item">4.500.000đ</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                        </div>
+                        <div class="col-md-12">
+                            <div class="paginationss">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination" id="listpagebanchay">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- footer -->
+<div id="footer"></div>
+</body>
+
+<script type="text/javascript">
+    // swal("Thông báo", "Đã thêm sản phẩm vào giỏ hàng!", "success");
+</script>
+</html>

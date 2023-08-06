@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+  <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+  <script type="text/javascript" th:src="@{/js/link.js}"></script>
+  <script type="text/javascript" th:src="@{/js/authen.js}"></script>
+</head>
+<body>
+<div class="col-md-12">
+  <img src="../images/logo.png" class="logo-web-login">
+</div>
+<div class="login-form">
+  <div class="row">
+    <div class="col-lg-6">
+      <img src="../images/logologin.png" class="img-login">
+    </div>
+    <div class="col-lg-6 content-login">
+      <h4>Sign In</h4>
+      <label>Username</label>
+      <input id="username" type="text" placeholder="username" class="form-control">
+      <label>Password</label>
+      <input id="password" type="password" placeholder="******" class="form-control">
+      <button class="btn-login" onclick="login()">Sign in</button>
+      <input type="checkbox" id="remember"><label class="lb-remember" for="remember"> Remember Me</label>
+      <a href="forget" class="forgot-password">Forgot Password</a><br>
+      <p class="not-member">Not a Member? <a href="regis">Sign Up</a> </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

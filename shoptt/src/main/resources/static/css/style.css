@@ -1,0 +1,963 @@
+body{
+    font-family: 'Quicksand',sans-serif;
+}
+.menu-top{
+    background-color: black;
+    height: 40px;
+}
+.menu-top p{
+    color: #fff;
+    line-height: 40px;
+}
+.list-menu-top{
+    list-style: none;
+    float: right;
+}
+.list-menu-top li{
+    float: left;
+    margin-left: 20px;
+    color: #fff;
+}
+.list-menu-top li a{
+    color: #fff;
+    line-height: 40px;
+}
+.logo-menu{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Sofia", sans-serif;
+}
+#navbarSupportedContent ul{
+    margin-left: 10%;
+}
+#navbarSupportedContent ul li{
+    margin-left: 20px;
+}
+#navbarSupportedContent ul li a {
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+}
+.d-flex i{
+    cursor: pointer;
+    margin-left: 20px;
+}
+.d-flex a{
+    color: #000;
+}
+
+.content{
+    min-height: 300px;
+}
+#myTabContent{
+    border: none;
+}
+.accordion-item{
+    border: none;
+}
+#profile-tab{
+    border: none;
+}
+.nav-tabs{
+    border: none;
+}
+#home-tab{
+    border: none;
+}
+#myTab {
+    width:100%;
+    text-align:center;
+    margin-top: 20px;
+}
+.tab-li {
+    display:inline-block;
+    *display:inline; /*IE7*/
+    *zoom:1; /*IE7*/
+    color:#fff;
+    margin-right:10px;
+}
+.tab-li button{
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+.img-item{
+    width: 100%;
+    height: auto;
+}
+.signle-item{
+    margin-top: 50px;
+}
+.name-signle-item{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin-top: 10px;
+    color: #807e7e;
+    padding-top: 10px;
+}
+.content-item-signle p {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+.content-item-signle{
+    padding-left: 5%;
+}
+.add-cart-item{
+    background-color: #f7a900;
+    border: none;
+    color: #fff;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.old-price-item{
+    font-weight: bold;
+    font-size: 12px;
+    display: inline-block;
+    text-decoration: line-through;
+    color: #f7a900;
+}
+.cart-item{
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: line-through;
+    color: #f7a900;
+    cursor: pointer;
+}
+.list-item{
+    width: 80%;
+    margin-left: 10%;
+}
+.signle-item a{
+    text-decoration: none;
+}
+.price-item{
+    font-weight: bold;
+    font-size: 13px;
+    padding-top: 5px;
+    color: #000;
+    text-align: center;
+
+}
+.paginationss {
+    display: inline-block;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+}
+
+.paginationss a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+.cart-banner{
+    background-color: #f2f3ee;
+    height: 80px;
+}
+.cart-banner h4{
+    line-height: 80px;
+}
+.img-cart{
+    width: 80px;
+}
+#title-table-cart tr th{
+    padding: 10px;
+}
+#list-cart tr td{
+    padding: 10px;
+}
+.table-cart{
+    margin-top: 80px;
+}
+
+.radio-custom {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-custom:hover input ~ .checkmark {
+    background-color: #828282;
+}
+.radio-custom input ~ .checkmark{
+    background-color: #828282;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-custom input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-custom input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-custom .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+.chitietdathang{
+    background-color: #f0eded;
+    margin-top: 10px;
+}
+.add-dia-chi{
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+    height: 40px;
+}
+.pay-momo{
+    width: 30px;
+    cursor: pointer;
+}
+.range-price button{
+    border: none;
+    font-size: 35px;
+    background-color: #fff;
+}
+.range-price input{
+    width: 60px;
+}
+.title-chitietdathang{
+    margin-top: 15px;
+}
+.login-form{
+    width: 50%;
+    margin: auto;
+    display: flex;
+}
+.logo-web-login{
+    width: 20%;
+    margin-left: 40%;
+}
+.div-img-login{
+    width: 50%;
+}
+.content-login h4{
+    text-align: center;
+}
+.div-img-login{
+    float: left;
+    flex: 1;
+}
+.img-login{
+    width: 100%;
+}
+.btn-login{
+    width: 100%;
+    background-color: #e8b047;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.lb-remember{
+    color: #e8b047;
+    margin-left: 10px;
+    display: inline-block;
+}
+.forgot-password{
+    color: #5d5e5e;
+    text-decoration: none;
+}
+.not-member{
+    text-align: center;
+    margin-top: 20px;
+    /* display: inline-block; */
+}
+.content-login label{
+    margin-top: 10px;
+}
+.logo-menu{
+    width: 150px;
+}
+.content-regis{
+    box-shadow: 5px 5px 5px 5px #8c8c8ced;
+}
+.img-regis{
+    width: 100%;
+}
+.content-regis{
+    padding: 30px;
+}
+.content-regis label{
+    margin-top: 10px;
+
+}
+.regis-form{
+    width: 60%;
+    margin: auto;
+
+}
+.btn-regis{
+    background-color: #2149eb;
+    color: #fff;
+    border: none;
+    width: 40%;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.chuyendn{
+    color: black;
+}
+.btn-tieptucmuahang{
+    margin-left: 10px;
+    border: 0.5px solid #c4c2c2;
+    height: 40px;
+    background-color: #fffcfc;
+}
+.btn-capnhatgiohang{
+    float: right;
+    height: 40px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+}
+.chitietdathang h5{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-thanhtoandonhang {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    height: 40px;
+    border: none;
+    margin-top: 50px;
+}
+.title-checkout{
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid #97ab74;
+}
+.title-checkout p {
+    line-height: 50px;
+    padding-left: 30px;
+}
+.bold-checkout{
+    font-weight: bold;
+}
+.btn-thaydoithongtin{
+    background-color: #000;
+    color: #fff;
+    height: 40px;
+    border: none;
+}
+.chitietcheckout{
+    background-color: #f2f3ee;
+}
+.table-checkout{
+    border-collapse:separate;
+    border-spacing: 0 1em;
+}
+.tongtiendonhang{
+    margin-top: 15px;
+}
+.btn-momo{
+    background-color: #000;
+    color: #fff;
+    height: 40px;
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.money-checkout{
+    color: red;
+}
+.infor-taikhoan{
+    background-color: #f7f7f7;
+    padding-bottom: 150px;
+}
+.title-taikhoan{
+    margin-top: 20px;
+}
+.profile-detail{
+    background-color: #fbfbfb;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+}
+.content-profile{
+    background-color: #fff;
+    padding: 20px;
+}
+.chitietthongtintk{
+    -webkit-box-shadow: 0 0 2px #000;
+    box-shadow: 0 0 2px #000;
+    padding: 0;
+}
+.img-tk{
+    width: 30%;
+    border-radius: 50%;
+}
+.upload-anh{
+    border: none;
+    margin-right: 200px;
+}
+.box {
+    position: relative;
+    width: 30%;
+}
+.box img {
+    width: 100%;
+    height: auto;
+}
+.box .upload-anh {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    font-size: 12px;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000;
+}
+.luuthaydoi{
+    background-color: #f54842;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    height: 35px;
+    width: 30%;
+    margin-top: 20px;
+}
+.content-profile label{
+    margin-top: 15px;
+}
+.profile-detail p{
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.img-detail{
+    width: 80%;
+    height: auto;
+}
+.name-detail{
+    font-size: 26px;
+    font-family: 'Quicksand',sans-serif;
+    font-weight: 500;
+}
+.price-detail{
+    font-size: 25px;
+    color: red;
+    font-weight: 700;
+    line-height: 10px;
+}
+.list-img-detail{
+    width: 100%;
+}
+.list-img-detail:hover{
+    border: 1px solid red;
+}
+.mausac-detail{
+    margin-bottom: 0px;
+}
+.chonmausac-detail{
+    margin-left: 30%;
+}
+.title-kichco-detail{
+    margin-top: 20px;
+}
+.singel-img-detail{
+    width: 15%;
+    float: left;
+}
+.clearBoth { clear:both; }
+.btn-add-gio-hang{
+    border: 2px solid red;
+    width: 45%;
+    color: red;
+    background-color: #fff;
+    height: 40px;
+    margin-top: 15px;
+}
+.btn-mua-ngay{
+    border: 2px solid black;
+    width: 45%;
+    color: black;
+    background-color: #fff;
+    height: 40px;
+    float: right;
+    margin-top: 15px;
+}
+.ghi-chu-detail{
+    font-weight: 700;
+    line-height: 10px;
+    margin-top: 20px;
+}
+.comment-user{
+    width: 100%;
+    display: flex;
+    -webkit-box-shadow: 0 0 3px #000;
+    box-shadow: 0 0 3px #000;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.comment-user img{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.content-comment {
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.user-comment{
+    display: inline-block;
+    font-weight: bold;
+}
+.time-comment{
+    display: inline-block;
+}
+.top-comment-user{
+    width: 100%;
+    background-color: #dedede;
+    height: 30px;
+}
+.top-comment-user p{
+    font-size: 14px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.contentcmt{
+    margin-left: 10px;
+}
+#footer{
+    margin-top: 50px;
+}
+.blog-single{
+    -webkit-box-shadow: 0 0 3px #000;
+    box-shadow: 0 0 3px #000;
+}
+.blog-single img{
+    width: 100%;
+}
+.ten-blog{
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+}
+.mota-blog{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    color: #888;
+}
+.blog-single p,a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.time-blog{
+    color: #78cccd;
+    padding-top: 15px;
+}
+.xemthem-blog{
+    color: #000;
+    text-decoration: none;
+}
+.blog-list{
+    margin-top: 50px;
+}
+.blogs{
+    margin-top: 15px;
+}
+.dangboi{
+    display: inline-block;
+}
+.updateby{
+    color: #78cccd;
+    font-weight: 700;
+}
+.blog-detail-name{
+    font-size: 30px;
+}
+.filter{
+    padding-top: 40px;
+}
+.checkbox-custom {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-custom:hover input ~ .checkmark-checkbox {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-custom input:checked ~ .checkmark-checkbox {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-custom input:checked ~ .checkmark-checkbox:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-custom .checkmark-checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.lb-chon-danhmuc{
+    margin-bottom: 15px;
+}
+
+/*!
+ * Slider for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+.slider {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+.slider.slider-horizontal {
+    width: 210px;
+    height: 20px;
+}
+.slider.slider-horizontal .slider-track {
+    height: 15px;
+    left: 0;
+    margin-top: 10px;
+    top: 50%;
+    width: 100%;
+}
+.slider.slider-horizontal .slider-selection {
+    height: 100%;
+    top: 0;
+    bottom: 0;
+}
+.slider.slider-horizontal .slider-handle {
+    margin-left: -12px;
+    margin-top: 2px;
+}
+
+.left-round{
+    margin-left:2px !important;
+}
+
+.slider.slider-horizontal .slider-handle.triangle {
+    border-width: 0 10px 10px 10px;
+    width: 0;
+    height: 0;
+    border-bottom-color: #0480be;
+    margin-top: 0;
+}
+.slider.slider-vertical {
+    height: 210px;
+    width: 20px;
+}
+.slider.slider-vertical .slider-track {
+    width: 10px;
+    height: 100%;
+    margin-left: -5px;
+    left: 50%;
+    top: 0;
+}
+.slider.slider-vertical .slider-selection {
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.slider.slider-vertical .slider-handle {
+    margin-left: -5px;
+    margin-top: -10px;
+}
+.slider.slider-vertical .slider-handle.triangle {
+    border-width: 10px 0 10px 10px;
+    width: 1px;
+    height: 1px;
+    border-left-color: #0480be;
+    margin-left: 0;
+}
+.slider input {
+    display: none;
+}
+.slider .tooltip-inner {
+    white-space: nowrap;
+}
+
+.tooltip-inner{
+    color: red;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.slider-track {
+    position: absolute;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
+    background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+    background-image: linear-gradient(to bottom, #f5f5f5, #f9f9f9);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.slider-selection {
+    -moz-box-sizing: border-box;
+    background: none repeat scroll 0 0 #FE980F;
+    border-radius: 15px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+    position: absolute;
+}
+
+.slider-handle {
+    background: #fff;
+    box-shadow:none;
+    height: 10px;
+    opacity: 1;
+    position: absolute;
+    width: 10px;
+}
+
+.slider-handle.round {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.slider-handle.triangle {
+    background: transparent none;
+}
+.hienthisoluong{
+    margin-top: 40px;
+}
+.xemchitiet-dh{
+    background-color: #fff;
+    color: #000;
+    border-radius: 30px;
+    height: 30px;
+    border: none;
+}
+.dangcho{
+    background-color: #a9aaab;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+}
+.dataodon{
+    background-color: #e3f216;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+}
+.dagui{
+    background-color: #0765a8;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+}
+.danhanhang{
+    background-color: #02cc3f;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+}
+.dahuy{
+    background-color: #cc3f02;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+}
+.img-invoice-detail{
+    width: 100px;
+}
+.huy-dh{
+    background-color: #cc3f02;
+    color: #fff;
+    border-radius: 30px;
+    height: 30px;
+    border: none;
+}
+.small-image {
+    width: 100%;
+    display: none;
+}
+.small-image img{
+    width: 20%;
+}
+
+.small-image img{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.small-image{
+    margin-left: 5%;
+    padding: 0;
+    text-align: center;
+}
+
+.signle-item:hover .small-image, .signle-item.hover .small-image {
+    display: block;
+}
+
+.signle-item:hover .img-item, .signle-item.hover .img-item {
+    margin-top: -30px;
+}
+
+#mycomment{
+    margin-top: 100px;
+}
+
+#mycomment button{
+    margin-top: 30px;
+}
+.authens{
+    cursor: pointer;
+}
+.linkcart{
+    color: #000;
+    text-decoration: none;
+}
+
+.btn-apdung{
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid blue;
+}
+.diachiuser{
+    margin-top: 50px;
+}
+
+.btn-add{
+    margin-top: 20px;
+}
+.notex{
+    color: red;
+}

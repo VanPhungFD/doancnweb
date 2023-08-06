@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --first-color: #4723D9;
+    --first-color-light: #AFA5D9;
+    --white-color: #F7F6FB;
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box
+}
+
+body {
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s
+}
+
+a {
+    text-decoration: none
+}
+
+.header {
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color:#fff;
+    z-index: var(--z-fixed);
+    transition: .5s;
+    box-shadow: 2px 2px #dedede;
+}
+
+.header_toggle {
+    color: var(--first-color);
+    font-size: 1.5rem;
+    cursor: pointer
+}
+
+.header_img {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+.header_img img {
+    width: 40px
+}
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: #151515;
+    padding: .5rem 1rem 0 0;
+    transition: .5s;
+    z-index: var(--z-fixed)
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden
+}
+
+.nav_logo,
+.nav_link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: .5rem 0 .5rem 1.5rem
+}
+
+.nav_logo {
+    margin-bottom: 2rem
+}
+
+.nav_logo-icon {
+    font-size: 1.25rem;
+    color: var(--white-color)
+}
+
+.nav_logo-name {
+    color: var(--white-color);
+    font-weight: 700
+}
+
+.nav_link {
+    position: relative;
+    color: var(--first-color-light);
+    margin-bottom: 1.5rem;
+    transition: .3s
+}
+
+.nav_link:hover {
+    color: var(--white-color)
+}
+
+.nav_icon {
+    font-size: 1.25rem
+}
+
+.show {
+    left: 0
+}
+
+.body-pd {
+    padding-left: calc(var(--nav-width) + 1rem)
+}
+
+.active {
+    color: var(--white-color)
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 32px;
+    background-color: var(--white-color)
+}
+
+.height-100 {
+    height: 100vh
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: calc(var(--header-height) + 1rem) 0 0 0;
+        padding-left: calc(var(--nav-width) + 2rem)
+    }
+
+    .header {
+        height: calc(var(--header-height) + 1rem);
+        padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
+    }
+
+    .header_img {
+        width: 40px;
+        height: 40px
+    }
+
+    .header_img img {
+        width: 45px
+    }
+
+    .l-navbar {
+        left: 0;
+        padding: 1rem 1rem 0 0
+    }
+
+    .show {
+        min-width: 230px;
+    }
+
+    .body-pd {
+        padding-left: calc(var(--nav-width) + 188px)
+    }
+}
+.main-component{
+    -webkit-box-shadow: 0 0 10px #dedede;
+    box-shadow: 0 0 10px #dedede;
+    min-height: 400px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+.main-component-add{
+    -webkit-box-shadow: 0 0 10px #dedede;
+    box-shadow: 0 0 10px #dedede;
+    min-height: 400px;
+}
+.img-sp-admin{
+    width: 100px;
+}
+.header-sp{
+    margin-bottom: 50px;
+}
+.checkbox-custom {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-custom:hover input ~ .checkmark-checkbox {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-custom input:checked ~ .checkmark-checkbox {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-custom input:checked ~ .checkmark-checkbox:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-custom .checkmark-checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox-custom{
+    display: inline-block;
+    margin-left: 15px;
+}
+.loctheongay{
+    line-height: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.btn-filter{
+    /* border: none;
+    width: 100px;
+    background-color: ; */
+}
+.tongdonhangs-admin{
+    background-color: #61ae36;
+    height: 100px;
+}
+.content-box-index ul {
+    list-style: none;
+}
+.content-box-index ul li{
+    list-style: none;
+    float: left;
+}
+.content-box-index h4{
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.content-box-index p {
+    color: #fff;
+}
+.sanpham-admin{
+    background-color: #343840;
+    height: 100px;
+}
+.tonguser-admin{
+    background-color: #feac00;
+    height: 100px;
+}
+.content-box-index img{
+    width: 70px;
+}
+.title-add-admin{
+    background-color: #f7f7f7;
+    height: 60px;
+    -webkit-box-shadow: 0 0 0px #c2c1c0;
+    box-shadow: 0 0 10px #c2c1c0;
+}
+.title-add-admin p {
+    line-height: 60px;
+    font-size: 18px;
+    padding-left: 5px;
+}
+.form-add {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.action-btn{
+    margin-top: 20px;
+}
+.form-add label{
+    margin-top: 10px;
+}
+.chooseImage{
+    /* border-left: 2px solid black; */
+}
+.choose-image{
+    width: 100%;
+    height: 300px;
+    background-color: #f4f4f4;
+    border: 3px dotted #fe9900;
+    cursor: pointer;
+}
+
+.choose-image p{
+    margin: auto;
+    text-align: center;
+}
+
+.choose-image i{
+    margin-top: 80px;
+    font-size: 60px;
+    color: #fe9900;
+}
+
+.upload-submit{
+    width: 100%;
+}
+.tox-notifications-container{
+    display: none;
+}
+#listsp-giamgia{
+    height: 400px;
+    overflow-y: scroll;
+}
+#loading_uploadroom{
+    width: 200px;
+    display: none;
+}
+.btn-add{
+    margin-top: 30px;
+}
+
+.imgblog{
+    margin-top: 10px;
+    width: 120px;
+}
+.img-invoice-detail{
+    width: 150px;
+}

@@ -1,0 +1,168 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <!-- link table -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+    <link href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- link table -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/link.js}"></script>
+    <script type="text/javascript" th:src="@{/js/menu.js}"></script>
+    <script type="text/javascript" th:src="@{/js/historyorder.js}"></script>
+
+    <script>
+        window.onload = function(){
+            loadMenu();
+            loadFooter();
+            checkRoleUser();
+            loadListOrder();
+        }
+    </script>
+</head>
+<body>
+<!-- menu -->
+<div id="menu"></div>
+<div class="content">
+    <div class="container-fuild cart-banner">
+        <div class="container">
+            <h4>Lịch Sử Đặt Hàng</h4>
+        </div>
+    </div>
+    <div class="container">
+        <div class="list-invoice">
+            <div id="list-invoice-content">
+                <table id="example" class="table table-striped" style="width:100%; margin-top: 50px;">
+                    <thead>
+                    <tr>
+                        <th>id đơn hàng</th>
+                        <th>Tổng tiền hàng</th>
+                        <th>Số lượng sản phẩm</th>
+                        <th>Ngày đặt</th>
+                        <th>Thanh toán</th>
+                        <th>Trạng thái đơn hàng</th>
+                        <th>Chi tiết đơn hàng</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody id="listorder">
+                    <tr>
+                        <td>#2342</td>
+                        <td>4,500,000đ</td>
+                        <td>3</td>
+                        <td>2023-02-11</td>
+                        <td>đã thanh toán qua momo</td>
+                        <td><p class="dangcho">đang chờ duyệt</p></td>
+                        <td><button class="xemchitiet-dh">Xem chi tiết</button></td>
+                        <td><button class="huy-dh">Hủy đơn</button></td>
+                    </tr>
+                    <tr>
+                        <td>#2342</td>
+                        <td>4,500,000đ</td>
+                        <td>3</td>
+                        <td>2023-02-11</td>
+                        <td>đã thanh toán qua momo</td>
+                        <td><p class="dataodon">đã tạo đơn hàng</p></td>
+                        <td><button class="xemchitiet-dh">Xem chi tiết</button></td>
+                        <td><button class="huy-dh">Hủy đơn</button></td>
+                    </tr>
+                    <tr>
+                        <td>#2342</td>
+                        <td>4,500,000đ</td>
+                        <td>3</td>
+                        <td>2023-02-11</td>
+                        <td>đã thanh toán qua momo</td>
+                        <td><p class="dagui">đã gửi</p></td>
+                        <td><button class="xemchitiet-dh">Xem chi tiết</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>#2342</td>
+                        <td>4,500,000đ</td>
+                        <td>3</td>
+                        <td>2023-02-11</td>
+                        <td>đã thanh toán qua momo</td>
+                        <td><p class="danhanhang">đã nhận được hàng</p></td>
+                        <td><button class="xemchitiet-dh">Xem chi tiết</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>#2342</td>
+                        <td>4,500,000đ</td>
+                        <td>3</td>
+                        <td>2023-02-11</td>
+                        <td>đã thanh toán qua momo</td>
+                        <td><p class="dahuy">đã hủy đơn hàng</p></td>
+                        <td><button data-bs-toggle="modal" data-bs-target="#chitietdonhang" class="xemchitiet-dh">Xem chi tiết</button></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div id="footer"></div>
+<div class="modal fade" id="chitietdonhang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">Chi tiết đơn hàng</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ảnh sản phẩm</th>
+                        <th>tên sản phẩm</th>
+                        <th>số lượng</th>
+                        <th>giá</th>
+                    </tr>
+                    </thead>
+                    <tbody id="listorderdt">
+                    <tr>
+                        <td><img src="image/detail.jpeg" class="img-invoice-detail"></td>
+                        <td>quần ống rộng</td>
+                        <td>3</td>
+                        <td>4,500,000đ</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // async function loaddata(){
+    //     main = ''
+    //     const resp = await fetch('https://provinces.open-api.vn/api/?depth=3',
+    //     {method: 'GET'})
+    //     var image = await resp.json();
+    //     for(i=0; i<image.length; i++){
+    //         for(j=0; j<30; j++){
+    //             main += '<tr>'+
+    //                 '<td>'+image[i].name+'</td>'+
+    //                 '<td>'+image[i].codename+'</td>'+
+    //                 '<td>Edinburgh</td>'+
+    //                 '<td>61</td>'+
+    //                 '<td>2011-04-25</td>'+
+    //                 '<td>$320,800</td>'+
+    //                 '</tr>'
+    //         }
+    //     }
+    //     document.getElementById("list").innerHTML = main;
+    //     $('#example').DataTable();
+    // }
+</script>
+</body>
+</html>
